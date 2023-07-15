@@ -6,7 +6,7 @@ from main.forms import RegisterForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 
-# @login_required('main:user_login')
+@login_required(login_url='main:user_login')
 def user_logout(request):
     auth.logout(request)
     return redirect('main:index')
