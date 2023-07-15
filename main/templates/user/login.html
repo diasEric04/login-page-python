@@ -1,0 +1,12 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+    <h1>Login</h1>
+
+    {% if user.is_authenticated %}
+        {% include 'user/partials/_already-logged.html' %}
+    {% else %}
+        {% include 'user/partials/_user-form.html' %}
+    {% endif %}
+
+{% endblock content %}

@@ -4,16 +4,21 @@
             Lorem ipsum
         </a>
     </h1>
+    {% if user.is_authenticated %}
+        <h2>olá, {{ user }}. 
+            <a href="{% url 'main:user_logout' %}">sair</a>
+        </h2>
+    {% endif %}
     <nav class='navbar'>
         <ul class='navbar-list'>
            {% if user.is_authenticated %}
                 sla
             {% else %}
                 <li class='navbar-item'>
-                    <a class='navbar-link' href="#">Login</a>
+                    <a class='navbar-link' href="{% url 'main:user_logout' %}">Login</a>
                 </li>
                 <li class='navbar-item'>
-                    <a class='navbar-link' href="#">Register</a>
+                    <a class='navbar-link' href="{% url 'main:user_register' %}">Register</a>
                 </li>
            {% endif %}
         </ul>
