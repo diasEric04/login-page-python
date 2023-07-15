@@ -1,0 +1,8 @@
+{
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+
+    "explorer.compactFolders": false,
+    "git.path": "D:\\ericdias\\git\\Git"
+}

@@ -1,0 +1,21 @@
+<header>
+    <h1>
+        <a href="{% url 'main:index' %}">
+            Lorem ipsum
+        </a>
+    </h1>
+    <nav class='navbar'>
+        <ul class='navbar-list'>
+           {% if user.is_authenticated %}
+                sla
+            {% else %}
+                <li class='navbar-item'>
+                    <a class='navbar-link' href="#">Login</a>
+                </li>
+                <li class='navbar-item'>
+                    <a class='navbar-link' href="#">Register</a>
+                </li>
+           {% endif %}
+        </ul>
+    </nav>
+</header>
